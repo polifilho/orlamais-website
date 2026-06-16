@@ -178,16 +178,38 @@ a {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: 1.15fr 0.85fr;
   gap: 56px;
   align-items: center;
 }
 
+.hero-copy {
+  align-self: start;
+  padding-top: clamp(24px, 2.4vw, 36px);
+}
+
 .hero h1 {
   margin: 24px 0 20px;
-  font-size: clamp(42px, 6vw, 76px);
-  line-height: 0.95;
-  letter-spacing: -0.055em;
+  font-size: clamp(40px, 5.2vw, 64px);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.hero-title {
+  overflow: hidden;
+}
+
+.hero-title span {
+  display: block;
+  transform: translateX(-8%);
+  opacity: 0;
+  animation: hero-title-slide-in 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.12s forwards;
+}
+
+.hero-subtitle {
+  transform: translateY(12px);
+  opacity: 0;
+  animation: hero-subtitle-fade-up 0.55s ease 0.32s forwards;
 }
 
 .hero p {
@@ -282,27 +304,53 @@ a {
 
 .floating-card {
   position: absolute;
-  right: 0;
-  bottom: 60px;
+  right: -12px;
+  bottom: 64px;
   z-index: 5;
-  max-width: 250px;
-  padding: 16px 18px;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.94);
+  max-width: 244px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
   color: var(--ink);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+  transform: rotate(-1deg);
+  backdrop-filter: blur(12px);
 }
 
 .floating-card strong {
   display: block;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.2;
 }
 
 .floating-card span {
   display: block;
-  margin-top: 2px;
+  margin-top: 4px;
+  line-height: 1.4;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 12px;
+}
+
+.floating-card__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(255, 138, 43, 0.08);
+  color: var(--orange-2);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.floating-card__cta:hover,
+.floating-card__cta:focus-visible {
+  background: rgba(255, 138, 43, 0.2);
+  color: var(--orange);
 }
 
 .section {
@@ -602,6 +650,30 @@ footer {
   transform: translateY(0);
 }
 
+@keyframes hero-title-slide-in {
+  from {
+    transform: translateX(-8%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes hero-subtitle-fade-up {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @media (max-width: 900px) {
   .nav-links {
     gap: 14px;
@@ -620,13 +692,20 @@ footer {
     padding-top: 105px;
   }
 
+  .hero-copy {
+    padding-top: 0;
+  }
+
   .phone {
     width: 285px;
     height: 615px;
   }
 
   .floating-card {
-    right: 10px;
+    right: 4px;
+    bottom: 40px;
+    max-width: 220px;
+    transform: rotate(0);
   }
 
   .cards,
