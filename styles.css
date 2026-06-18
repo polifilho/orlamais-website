@@ -197,10 +197,6 @@ a {
 
 .hero-title {
   overflow: hidden;
-}
-
-.hero-title span {
-  display: block;
   transform: translateX(-8%);
   opacity: 0;
   animation: hero-title-slide-in 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.12s forwards;
