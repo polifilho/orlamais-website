@@ -82,7 +82,7 @@ a {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 20px;
 }
 
@@ -101,6 +101,7 @@ a {
   display: flex;
   align-items: center;
   gap: 24px;
+  margin-left: auto;
   font-size: 14px;
   font-weight: 700;
 }
@@ -129,7 +130,7 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: auto;
+  margin-left: 18px;
   position: relative;
 }
 
@@ -142,47 +143,54 @@ a {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-width: 62px;
-  height: 44px;
-  padding: 0 14px;
+  min-width: 58px;
+  height: 42px;
+  padding: 0 11px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 14px;
-  background: rgba(0, 0, 0, 0.22);
+  background: rgba(255, 255, 255, 0.12);
   color: #fff;
   font: inherit;
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 11px;
+  font-weight: 700;
   cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.language-switcher__toggle:hover,
+.language-switcher__toggle:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.22);
 }
 
 .language-switcher__caret {
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
   transform: translateY(-1px) rotate(45deg);
   transition: transform 0.2s ease;
 }
 
 .language-switcher__menu {
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% + 6px);
   right: 0;
   z-index: 26;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  min-width: 78px;
-  gap: 8px;
-  padding: 10px;
+  min-width: 62px;
+  gap: 4px;
+  padding: 7px 7px;
   border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 16px;
-  background: rgba(11, 20, 24, 0.94);
-  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.24);
-  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
+  backdrop-filter: blur(14px);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-8px) scale(0.98);
+  transform: translateY(-6px) scale(0.985);
   transform-origin: top right;
   pointer-events: none;
   transition:
@@ -192,29 +200,33 @@ a {
 }
 
 .language-switcher__button {
+  display: grid;
+  place-items: center;
   border: 0;
-  border-radius: 12px;
+  width: 100%;
+  border-radius: 999px;
   background: transparent;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.84);
   font: inherit;
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 17px;
+  font-weight: 700;
   line-height: 1;
-  min-height: 40px;
-  padding: 0 12px;
+  min-height: 34px;
+  padding: 0;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
 }
 
 .language-switcher__button:hover,
 .language-switcher__button:focus-visible {
-  background: rgba(255, 138, 43, 0.14);
+  background: rgba(255, 255, 255, 0.12);
   color: #fff;
-  transform: translateX(3px);
+  transform: translateY(-1px);
 }
 
 .language-switcher__button.is-active {
-  background: rgba(255, 138, 43, 0.22);
+  background: rgba(255, 138, 43, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 210, 174, 0.14);
   color: #fff;
 }
 
@@ -326,6 +338,11 @@ a {
   grid-template-columns: 1.05fr 0.95fr;
   gap: 56px;
   align-items: center;
+}
+
+.hero-copy {
+  align-self: start;
+  padding-top: 6px;
 }
 
 .hero h1 {
@@ -493,6 +510,10 @@ a {
 
   .hero-grid {
     gap: 28px;
+  }
+
+  .hero-copy {
+    padding-top: 2px;
   }
 
   .hero h1 {
@@ -864,7 +885,7 @@ footer {
 
   .nav-actions {
     width: auto;
-    margin-left: 0;
+    margin-left: auto;
     justify-content: flex-end;
   }
 
@@ -944,6 +965,11 @@ footer {
 
   .hero--home {
     padding-top: 105px;
+  }
+
+  .hero-copy {
+    align-self: auto;
+    padding-top: 0;
   }
 
   .phone {

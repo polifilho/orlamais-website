@@ -328,6 +328,16 @@ const translations = {
 };
 
 const defaultLanguage = "pt-BR";
+const languageFlags = {
+  "pt-BR": "🇧🇷",
+  en: "🇺🇸",
+  es: "🇪🇸",
+};
+const languageLabels = {
+  "pt-BR": "Português",
+  en: "English",
+  es: "Español",
+};
 const languageButtons = document.querySelectorAll("[data-lang]");
 const translatableElements = document.querySelectorAll("[data-i18n]");
 const metaDescription = document.querySelector("#meta-description");
@@ -363,10 +373,13 @@ const applyTranslations = (language) => {
 
   languageButtons.forEach((button) => {
     button.classList.toggle("is-active", button.dataset.lang === selectedLanguage);
+    button.textContent = languageFlags[button.dataset.lang] || button.dataset.lang.toUpperCase();
+    button.setAttribute("aria-label", languageLabels[button.dataset.lang] || button.dataset.lang);
+    button.setAttribute("title", languageLabels[button.dataset.lang] || button.dataset.lang);
   });
 
   if (languageCurrent) {
-    languageCurrent.textContent = selectedLanguage === "pt-BR" ? "PT" : selectedLanguage.toUpperCase();
+    languageCurrent.textContent = languageFlags[selectedLanguage] || selectedLanguage.toUpperCase();
   }
 
   window.localStorage.setItem("orlamais-language", selectedLanguage);
