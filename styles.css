@@ -90,11 +90,13 @@ a {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex: 0 0 auto;
 }
 
 .brand img {
-  height: 42px;
-  width: auto;
+  display: block;
+  width: clamp(148px, 11vw, 184px);
+  height: auto;
 }
 
 .nav-links {
@@ -240,7 +242,6 @@ a {
   transform: translateY(0) scale(1);
   pointer-events: auto;
 }
-
 .nav-toggle {
   display: none;
   align-items: center;
@@ -335,7 +336,7 @@ a {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: 1.15fr 0.85fr;
   gap: 56px;
   align-items: center;
 }
@@ -347,9 +348,22 @@ a {
 
 .hero h1 {
   margin: 24px 0 20px;
-  font-size: clamp(42px, 6vw, 76px);
-  line-height: 0.95;
-  letter-spacing: -0.055em;
+  font-size: clamp(40px, 5.2vw, 64px);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.hero-title {
+  overflow: hidden;
+  transform: translateX(-8%);
+  opacity: 0;
+  animation: hero-title-slide-in 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.12s forwards;
+}
+
+.hero-subtitle {
+  transform: translateY(12px);
+  opacity: 0;
+  animation: hero-subtitle-fade-up 0.55s ease 0.32s forwards;
 }
 
 .hero p {
@@ -870,6 +884,30 @@ footer {
   transform: translateY(0);
 }
 
+@keyframes hero-title-slide-in {
+  from {
+    transform: translateX(-8%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes hero-subtitle-fade-up {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @media (max-width: 900px) {
   .nav {
     flex-wrap: nowrap;
@@ -903,7 +941,6 @@ footer {
     color: #fff;
     transform: translateX(3px);
   }
-
   .nav-links {
     position: absolute;
     top: calc(100% + 8px);

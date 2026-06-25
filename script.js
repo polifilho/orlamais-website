@@ -393,7 +393,6 @@ languageButtons.forEach((button) => {
     applyTranslations(button.dataset.lang);
   });
 });
-
 const nav = document.querySelector(".nav");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
