@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Orla+ | Política de Privacidade</title>
-  <meta name="description" content="Política de Privacidade do Orla+, incluindo informações sobre coleta, uso, retenção e proteção de dados pessoais." />
+  <meta id="meta-description" name="description" content="Política de Privacidade do Orla+, incluindo informações sobre coleta, uso, retenção e proteção de dados pessoais." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://www.orlamais.com.br/privacy.html" />
   <link rel="icon" type="image/svg+xml" href="./assets/logo-orlamais.svg" />
@@ -21,104 +21,73 @@
   <meta name="twitter:image" content="https://www.orlamais.com.br/assets/social-preview.png" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
-<body class="legal-page">
+<body class="legal-page" data-i18n-page="privacyPage">
   <header class="site-header site-header--solid">
     <div class="container nav">
       <a class="brand" href="./index.html"><img src="./assets/app-white-logo.png" alt="Orla+" /></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
       <nav class="nav-links nav-links--dark" id="primary-nav" aria-label="Principal">
-        <a href="./index.html">Início</a>
-        <a href="./privacy.html">Privacidade</a>
-        <a href="./terms.html">Termos</a>
+        <a href="./index.html" data-i18n="nav.home">Início</a>
+        <a href="./privacy.html" data-i18n="nav.privacy">Privacidade</a>
+        <a href="./terms.html" data-i18n="nav.terms">Termos</a>
       </nav>
+      <div class="nav-actions">
+        <div class="language-switcher" data-language-switcher>
+          <button
+            class="language-switcher__toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="language-menu"
+            aria-label="Selecionar idioma"
+          >
+            <span class="language-switcher__current" aria-hidden="true">🇧🇷</span>
+            <span class="language-switcher__caret" aria-hidden="true"></span>
+          </button>
+          <div class="language-switcher__menu" id="language-menu" aria-label="Idioma">
+            <button class="language-switcher__button is-active" type="button" data-lang="pt-BR" aria-label="Português" title="Português">🇧🇷</button>
+            <button class="language-switcher__button" type="button" data-lang="en" aria-label="English" title="English">🇺🇸</button>
+            <button class="language-switcher__button" type="button" data-lang="es" aria-label="Español" title="Español">🇪🇸</button>
+          </div>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
   <main>
     <section class="hero hero--legal">
       <div class="container">
-        <span class="pill">Privacidade</span>
-        <h1>Política de Privacidade do Orla+</h1>
-        <p>Informações sobre coleta, uso e proteção de dados pessoais na plataforma Orla+.</p>
+        <span class="pill" data-i18n="privacyPage.hero.pill">Privacidade</span>
+        <h1 data-i18n="privacyPage.hero.title">Política de Privacidade do Orla+</h1>
+        <p data-i18n="privacyPage.hero.subtitle">Informações sobre coleta, uso e proteção de dados pessoais na plataforma Orla+.</p>
       </div>
     </section>
     <section class="section">
       <div class="container">
         <div class="legal-card">
-          <span class="eyebrow">Documento Oficial</span>
-          <h2>POLÍTICA DE PRIVACIDADE – ORLA+</h2>
-          <div class="legal-block">Política de Privacidade – Orla+
-Última atualização: 17 de fevereiro de 2026
-A Orla+ respeita sua privacidade e está comprometida com a proteção dos dados pessoais de seus usuários, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 – LGPD) e demais legislações aplicáveis.
-Esta Política explica como coletamos, utilizamos e protegemos suas informações.</div>
-          <h3>1. Quem Somos</h3>
-          <div class="legal-block">Orla+ é uma plataforma digital que conecta usuários a estabelecimentos (lojistas) para realização de reservas de serviços de praia.
-📧 Contato: contato@orlamais.com.br
-🌐 https://orlamais.com.br</div>
-          <h3>2. Dados Coletados</h3>
-          <h3>2.1 Dados fornecidos pelo usuário</h3>
-          <div class="legal-block">Nome completo
-Endereço de e-mail
-Telefone (opcional)
-Informações inseridas no cadastro
-Observações feitas em reservas</div>
-          <h3>2.2 Dados coletados automaticamente</h3>
-          <div class="legal-block">Endereço IP
-Informações do dispositivo
-Logs de acesso
-Dados técnicos necessários para autenticação e segurança</div>
-          <h3>3. Finalidade do Uso dos Dados</h3>
-          <div class="legal-block">Utilizamos seus dados para:
-Criar e gerenciar sua conta
-Permitir a realização de reservas
-Enviar emails de confirmação e redefinição de senha
-Garantir segurança e prevenção contra fraudes
-Melhorar a experiência do usuário
-Cumprir obrigações legais
-A Orla+ não processa pagamentos dentro do aplicativo no momento.</div>
-          <h3>4. Compartilhamento de Dados</h3>
-          <div class="legal-block">Seus dados podem ser compartilhados com:
-Supabase Inc. (infraestrutura de autenticação e banco de dados)
-Provedores de hospedagem e infraestrutura
-Autoridades públicas, quando exigido por lei
-Não vendemos seus dados pessoais.</div>
-          <h3>5. Armazenamento e Segurança</h3>
-          <div class="legal-block">Os dados são armazenados em servidores seguros com medidas técnicas adequadas de proteção, incluindo criptografia e controle de acesso.</div>
-          <h3>6. Menores de Idade</h3>
-          <div class="legal-block">A plataforma pode ser utilizada por menores de 18 anos. Recomendamos que menores utilizem o serviço com supervisão dos responsáveis legais.</div>
-          <h3>7. Direitos do Titular (LGPD)</h3>
-          <div class="legal-block">Você pode solicitar:
-Acesso aos seus dados
-Correção de dados incompletos ou incorretos
-Exclusão da conta
-Revogação de consentimento
-Para exercer seus direitos:
-📧 contato@orlamais.com.br</div>
-          <h3>8. Retenção de Dados</h3>
-          <div class="legal-block">Os dados serão mantidos enquanto sua conta estiver ativa ou pelo período necessário para cumprir obrigações legais e regulatórias.</div>
-          <h3>9. Cookies e Tecnologias</h3>
-          <div class="legal-block">Podemos utilizar cookies e tecnologias similares para autenticação e melhoria da experiência do usuário.</div>
-          <h3>10. Alterações nesta Política</h3>
-          <div class="legal-block">Esta Política pode ser atualizada periodicamente. Recomendamos a consulta regular desta página.</div>
-          <h3>11. Como excluir a conta</h3>
-          <div class="legal-block">Os usuários podem excluir permanentemente sua conta diretamente no aplicativo Orla+ seguindo os passos:
-Acesse o menu Perfil
-Clique em “Excluir conta”
-Confirme a exclusão
-Dados excluídos:
-Nome
-E-mail
-Foto de perfil
-Histórico de reservas
-Retenção de dados:
-Alguns dados podem ser mantidos temporariamente para cumprimento de obrigações legais.</div>
-          <h3>12. Contato</h3>
-          <div class="legal-block">Em caso de dúvidas:
-📧 contato@orlamais.com.br
-🌐 https://orlamais.com.br</div>
+          <span class="eyebrow" data-i18n="legal.docBadge">Documento Oficial</span>
+          <h2 data-i18n="privacyPage.docTitle">POLÍTICA DE PRIVACIDADE – ORLA+</h2>
+          <div class="legal-block" data-i18n="privacyPage.intro">Última atualização: 26 de setembro de 2026
+A Orla+ respeita sua privacidade e está comprometida com a proteção dos dados pessoais dos usuários, em conformidade com a LGPD (Lei nº 13.709/2018).</div>
+          <h3 data-i18n="privacyPage.s1Title">1. Dados que coletamos</h3>
+          <div class="legal-block" data-i18n="privacyPage.s1Body">Fornecidos por você: nome completo, e-mail, telefone, data de nascimento, CPF ou passaporte, foto de perfil (opcional), dados de reserva. Esses dados são os mesmos para clientes e barraqueiros.
+Coletados automaticamente: endereço IP, informações do dispositivo, logs de acesso.</div>
+          <h3 data-i18n="privacyPage.s2Title">2. Para que usamos</h3>
+          <div class="legal-block" data-i18n="privacyPage.s2Body">Criar e manter sua conta, confirmar que você tem 18 anos ou mais, processar reservas e pagamentos, enviar confirmações e notificações, prevenir fraude, cumprir obrigações legais.</div>
+          <h3 data-i18n="privacyPage.s3Title">3. Com quem compartilhamos</h3>
+          <div class="legal-block" data-i18n="privacyPage.s3Body">Provedores de banco de dados e autenticação e, quando o pagamento é feito pelo app, o parceiro de processamento de pagamentos. Autoridades, quando exigido por lei. Não vendemos seus dados pessoais.</div>
+          <h3 data-i18n="privacyPage.s4Title">4. Seus direitos (LGPD)</h3>
+          <div class="legal-block" data-i18n="privacyPage.s4Body">Você pode solicitar acesso, correção, exclusão dos seus dados, ou revogar consentimento, escrevendo para contato@orlamais.com.br. Você também pode excluir sua conta diretamente pelo app, em Perfil → Excluir minha conta — isso remove nome, e-mail, foto e histórico de reservas, respeitado o prazo de retenção exigido por lei.</div>
+          <h3 data-i18n="privacyPage.s5Title">5. Idade mínima</h3>
+          <div class="legal-block" data-i18n="privacyPage.s5Body">O Orla+ não é destinado a menores de 18 anos. Não coletamos intencionalmente dados de menores de idade.</div>
+          <h3 data-i18n="privacyPage.s6Title">6. Cookies e tecnologias similares</h3>
+          <div class="legal-block" data-i18n="privacyPage.s6Body">Usamos armazenamento local no aparelho para manter sua sessão logada e melhorar a experiência.</div>
+          <h3 data-i18n="privacyPage.s7Title">7. Alterações</h3>
+          <div class="legal-block" data-i18n="privacyPage.s7Body">Podemos atualizar esta política. Mudanças relevantes exigem novo aceite para continuar usando o app.</div>
+          <h3 data-i18n="privacyPage.s8Title">8. Contato</h3>
+          <div class="legal-block" data-i18n="privacyPage.s8Body">contato@orlamais.com.br — WhatsApp: +55 21 99020-6835</div>
         </div>
       </div>
     </section>
@@ -126,7 +95,7 @@ Alguns dados podem ser mantidos temporariamente para cumprimento de obrigações
   <footer>
     <div class="container foot">
       <img src="./assets/app-white-logo.png" alt="Orla+" />
-      <small>© 2026 Orla+. Política de Privacidade. <a href="mailto:contato@orlamais.com.br">contato@orlamais.com.br</a> · <a href="https://www.instagram.com/orlamais" target="_blank" rel="noreferrer">@orlamais</a></small>
+      <small><span data-i18n="privacyPage.footerCopy">© 2026 Orla+. Política de Privacidade.</span> <a href="mailto:contato@orlamais.com.br">contato@orlamais.com.br</a> · <a href="https://www.instagram.com/orlamais" target="_blank" rel="noreferrer">@orlamais</a></small>
     </div>
   </footer>
   <script src="./script.js"></script>
